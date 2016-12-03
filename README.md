@@ -46,6 +46,9 @@ export default Ember.Route.extend({
       transition.finally(() => {
         nprogress.done();
       });
+      
+      /* necessary so the loading substate is entered */
+      return true;
     }
   }
 });
